@@ -1,4 +1,7 @@
-
+# dbt
 target/
 dbt_packages/
 logs/
+
+# poetry
+.poetry
