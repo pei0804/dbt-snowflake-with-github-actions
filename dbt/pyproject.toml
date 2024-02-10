@@ -1,15 +1,26 @@
-[tool.poetry]
-name = "dbt-handson"
+[project]
+name = "dbt"
 version = "0.1.0"
-description = ""
-authors = ["pei <peeeei0804@gmail.com>"]
-readme = "README.md"
+description = "Add your description here"
+authors = [
+    { name = "pei", email = "peeeei0804@gmail.com" }
+]
+dependencies = [
+    "dbt-snowflake>=1.7.1",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-dbt-snowflake = "v1.7.1"
+requires-python = ">=3.11,<3.12"
 
+[project.scripts]
+hello = "dbt:hello"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
